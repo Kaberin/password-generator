@@ -1,9 +1,10 @@
 .functional {
+  justify-self: start;
   &__clipboard {
     width: 100%;
     border: 2px solid rgba(0, 240, 255, 1);
     background-color: rgba(0, 240, 255, 0.1);
-    padding: 20px 90px 20px 20px;
+    padding: 20px 20px 20px 20px;
     margin-bottom: 20px;
   }
   &__password {

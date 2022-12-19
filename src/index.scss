@@ -26,7 +26,12 @@ code {
   column-gap: 120px;
   row-gap: 60px;
   margin-right: 150px;
-  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.root {
+  margin: 0 auto;
 }
 .history {
   grid-row: 2/3;
@@ -41,6 +46,10 @@ code {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #f8ef00;
+
+  &__div {
+    justify-self: start;
+  }
 }
 @media (max-width: 1000px) {
   .app {
@@ -61,6 +70,7 @@ code {
     padding: 50px 0;
     margin: 0 auto;
   }
+
   .app {
     display: flex;
     align-items: center;
@@ -73,6 +83,13 @@ code {
     flex-direction: column;
     align-items: center;
     justify-self: center;
+    &__clipboard {
+      padding-right: 20px;
+      max-width: 100%;
+    }
+    &__password {
+      width: fit-content;
+    }
   }
   .title {
     text-align: center;
