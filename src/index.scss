@@ -21,11 +21,12 @@ code {
 }
 .app {
   display: grid;
-  grid-template-columns: repeat(2, minmax(600px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   grid-template-rows: repeat(2, min-content);
   column-gap: 120px;
   row-gap: 60px;
   margin-right: 150px;
+  justify-content: center;
 }
 .history {
   grid-row: 2/3;
@@ -43,9 +44,50 @@ code {
 }
 @media (max-width: 1000px) {
   .app {
-    grid-template-columns: 1fr;
+    // grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 0;
   }
   .history {
     grid-row: 3/4;
   }
+}
+@media (max-width: 500px) {
+  #root {
+    display: flex;
+    justify-content: center;
+  }
+  body {
+    padding: 50px 0;
+    margin: 0 auto;
+  }
+  .app {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .functional {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+  }
+  .title {
+    text-align: center;
+    font-size: 40px;
+  }
+  .history {
+    overflow: wrap;
+    justify-self: center;
+    &__title {
+      text-align: center;
+    }
+    &__item {
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+  }
+  //checkboxes adaptive in components/checkboxes/checkboxes.scss
 }

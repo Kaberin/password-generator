@@ -9,6 +9,9 @@
   &__password {
     display: inline-block;
     color: rgba(0, 240, 255, 1);
+    overflow: wrap;
+    word-break: break-all;
+    word-wrap: break-word;
   }
   &__button {
     background-color: rgba(248, 239, 0, 1);
